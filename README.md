@@ -21,7 +21,7 @@ Before a gesture can be compared, it must be standardized. The `preprocess` func
 
 After preprocessing, we have two standardized gestures. However, we still have the problem of **speed and timing**. A user might draw the first half of a circle quickly and the second half slowly.
 This is solved using **Dynamic Time Warping (DTW)**. DTW is an algorithm that finds the optimal alignment between two time series (in our case, sequences of points). Instead of a rigid, point-for-point comparison (which would fail), DTW flexibly "warps" time, allowing it to find the minimum-cost path to match one shape to another, even if they have non-linear timing differences.
-The gesture is classified as the template that has the lowest DTW distance (cost). It runs on FastDTW which is approximation of true DTW algorithm with **O(n) speed**.
+The gesture is classified as the template that has the lowest DTW distance (cost). It runs on FastDTW which is approximation of true DTW algorithm with **O(n) time complexity**.
 
 ## Features
 
